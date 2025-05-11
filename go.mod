@@ -5,6 +5,7 @@ go 1.23.6
 require (
 	github.com/BurntSushi/toml v1.5.0 // indirect
 	github.com/certifi/gocertifi v0.0.0-20210507211836-431795d63e8d // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/evalphobia/logrus_sentry v0.8.2 // indirect
 	github.com/getsentry/raven-go v0.2.0 // indirect
 	github.com/go-resty/resty/v2 v2.16.5 // indirect
