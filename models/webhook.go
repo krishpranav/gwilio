@@ -17,7 +17,7 @@ type (
 		Timestamp        string `json:"Timestamp,omitempty" form:"Timestamp" query:"Timestamp" freeswitch:"Event-Date-GMT"`
 		CallSid          string `json:"CallSid,omitempty" form:"CallSid" query:"CallSid" freeswitch:"Variable_call_sid"`
 		To               string `json:"To,omitempty" form:"To" query:"To" freeswitch:"Variable_sip_req_user"`
-		AccountSid       string `json:"AccountSid,omitempty" form:"AccountSid" query:"AccountSid" freeswitch:"Variable_tiniyo_accid"`
+		AccountSid       string `json:"AccountSid,omitempty" form:"AccountSid" query:"AccountSid" freeswitch:"Variable_gwilio_accid"`
 		Caller           string `json:"Caller,omitempty" form:"Caller" query:"Caller" freeswitch:"Caller-ANI"`
 		From             string `json:"From,omitempty" form:"From" query:"From" freeswitch:"Variable_sip_from_user"`
 		ParentCallSid    string `json:"ParentCallSid,omitempty" form:"ParentCallSid" query:"ParentCallSid" freeswitch:"Variable_parent_call_sid"`
@@ -52,7 +52,7 @@ type (
 		DialCallStatus   string `json:"DialCallStatus,omitempty"`
 		DialCallSid      string `json:"DialCallSid,omitempty"`
 		DialCallDuration string `json:"DialCallDuration,omitempty"`
-		RecordingUrl     string `json:"RecordingUrl,omitempty" form:"RecordingUrl" query:"RecordingUrl" freeswitch:"Variable_tiniyo_recording_file"`
+		RecordingUrl     string `json:"RecordingUrl,omitempty" form:"RecordingUrl" query:"RecordingUrl" freeswitch:"Variable_gwilio_recording_file"`
 		PriceUnit        string `json:"price_unit,omitempty"`
 	}
  
