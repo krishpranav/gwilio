@@ -21,8 +21,8 @@ import (
 )
 
 const (
-	SipCallIdentityHeader = "sip_h_X-Tiniyo-Phone"
-	ExportVars            = "'tiniyo_accid\\,tiniyo_rate\\,tiniyo_pulse\\,parent_call_uuid\\,parent_call_sid'"
+	SipCallIdentityHeader = "sip_h_X-Gwilio-Phone"
+	ExportVars            = "'gwilio_accid\\,gwilio_rate\\,gwilio_pulse\\,parent_call_uuid\\,parent_call_sid'"
 	DefaultCodecs         = "'PCMU,PCMA'"
 	DefaultCallerIdType   = "pid"
 	InstantRingback       = "true"
@@ -72,7 +72,7 @@ func GenDialString(cr *models.CallRequest) string {
 	}
 
 	if cr.SipPilotNumber != ""{
-		originateVars["sip_h_X-Tiniyo-Pilot-Number"] = cr.SipPilotNumber
+		originateVars["sip_h_X-Gwilio-Pilot-Number"] = cr.SipPilotNumber
 	}
 
 	originateVars["originate_timeout"] = "65"
@@ -124,18 +124,18 @@ func GenDialString(cr *models.CallRequest) string {
 	originateVars["origination_uuid"] = cr.Sid
 	originateVars["parent_call_sid"] = cr.ParentCallSid
 	originateVars["parent_call_uuid"] = cr.ParentCallSid
-	originateVars["tiniyo_accid"] = cr.AccountSid
+	originateVars["gwilio_accid"] = cr.AccountSid
 	originateVars["direction"] = "outbound-api"
 	
 	strRate := fmt.Sprintf("%f", cr.Rate)
-	originateVars["tiniyo_rate"] = strRate
+	originateVars["gwilio_rate"] = strRate
 
 	if cr.SendDigits != "" {
 		originateVars["execute_on_answer_2"] = fmt.Sprintf("'send_dtmf %s'", cr.SendDigits)
 	}
 
 	strPulse := fmt.Sprintf("%d", cr.Pulse)
-	originateVars["tiniyo_pulse"] = strPulse
+	originateVars["gwilio_pulse"] = strPulse
 	originateVars["export_vars"] = ExportVars
 	originateString, _ := ConvertMapToDialString(originateVars)
 
