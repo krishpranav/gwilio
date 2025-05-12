@@ -25,7 +25,7 @@ type CallRequest struct {
 	Timeout                            string  `json:"Timeout"`
 	From                               string  `json:"From" example:"15677654321"`
 	To                                 string  `json:"To" example:"15677654321"`
-	CallerName                         string  `json:"caller_name" example:"Tiniyo"`
+	CallerName                         string  `json:"caller_name" example:"Gwilio"`
 	CallerId                           string  `json:"CallerId"`
 	Byoc                               string  `json:"Byoc"`
 	CallReason                         string  `json:"CallReason"`
@@ -37,11 +37,11 @@ type CallRequest struct {
 	AccountSid                         string  `json:"AccountSid"`
 	Record                             string  `json:"Record"`
 	SendDigits                         string  `json:"SendDigits"`
-	Play                               string  `json:"play" example:"https://gwilio.s3.amazonaws.com/MissionImpossible.mp3"`
+	Play                               string  `json:"play" example:"https://gwilio.s3.amazonaws.com/sample.mp3"`
 	Speak                              string  `json:"speak" example:"Hello Dear, Thanks for using our service"`
 	ApplicationSid                     string  `json:"ApplicationSid" example:"your gwilio application id"`
 	TinyML                             string  `json:"TinyML" example:"<Response><Say>Hello World</Say>"`
-	Url                                string  `json:"Url" example:"https://raw.githubusercontent.com/tiniyo/public/master/answer.xml"`
+	Url                                string  `json:"Url" example:"https://raw.githubusercontent.com/gwilio/public/master/answer.xml"`
 	Method                             string  `json:"Method" example:"GET"`
 	FallbackMethod                     string  `json:"FallbackMethod"`
 	FallbackUrl                        string  `json:"FallbackUrl"`
